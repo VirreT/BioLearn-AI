@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Graphene",
+    "version": "0.0.1",
+    "description": "Ditt naturvetenskapliga AI verktyg",
+    "permissions": [
+        "activeTab", 
+        "scripting"
+    ],
+    "background": {
+    "service_worker": "content.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+    "default_icon": {
+        "128": "assets/icon-128-1.png"
+    },
+        "default_title": "Graphene"
+    },
+
+    "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }
+    ]
+}
