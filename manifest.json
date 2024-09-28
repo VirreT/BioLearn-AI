@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "BioLearn AI",
     "version": "0.0.1",
-    "description": "Ditt biologi AI verktyg",
+    "description": "Ditt AIdrivna studieverktyg för biologi",
     "permissions": [
         "activeTab", 
         "scripting"
