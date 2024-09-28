@@ -8,10 +8,10 @@
         "scripting"
     ],
     "background": {
-    "service_worker": "content.js"
+    "service_worker": "extension/content.js"
     },
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "extension/popup.html",
     "default_icon": {
         "128": "assets/icon-128-1.png"
     },
@@ -21,7 +21,7 @@
     "content_scripts": [
     {
         "matches": ["<all_urls>"],
-        "js": ["content.js"]
+        "js": ["extension/content.js"]
     }
     ]
 }
