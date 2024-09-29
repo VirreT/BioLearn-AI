@@ -1,27 +1,26 @@
 {
     "manifest_version": 3,
-    "name": "Biolearn AI",
+    "name": "BioLearn AI",
     "version": "0.0.1",
-    "description": "Ditt AI-drivna Studieverktyg för Biologi",
+    "description": "Ditt AIdrivna studieverktyg för biologi",
     "permissions": [
         "activeTab", 
         "scripting"
     ],
     "background": {
-    "service_worker": "extension/content.js"
+        "service_worker": "extension/background.js"
     },
     "action": {
         "default_popup": "extension/popup.html",
-    "default_icon": {
-        "128": "assets/icon-128-1.png"
+        "default_icon": {
+            "128": "assets/icon-128-1.png"
+        },
+        "default_title": "BioLearn AI"
     },
-        "default_title": "Biolearn AI"
-    },
-
     "content_scripts": [
-    {
-        "matches": ["<all_urls>"],
-        "js": ["extension/content.js"]
-    }
+        {
+            "matches": ["<all_urls>"],
+            "js": ["extension/content.js"]
+        }
     ]
 }
