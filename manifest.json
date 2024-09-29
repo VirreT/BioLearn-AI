@@ -8,7 +8,7 @@
         "scripting"
     ],
     "background": {
-        "service_worker": "extension/content.js"
+        "service_worker": "extension/background.js"
     },
     "action": {
         "default_popup": "extension/popup.html",
