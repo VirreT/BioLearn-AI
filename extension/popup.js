@@ -11,7 +11,7 @@ document.getElementById("extractText").addEventListener("click", () => {
         },
     }, (results) => {
         // Display the extracted text in the popup
-        document.getElementById("output").innerText = results[0].result;
+        console.log(results[0].result);
     });
     });
 }); 
