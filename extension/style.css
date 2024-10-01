@@ -4,6 +4,9 @@ body {
     width: 300px;
     background-color: #1c2129;
     color: aliceblue;
+    display:grid;
+    align-items: center;
+    justify-content: center;
 }
 button{
     width: 120px;
@@ -16,5 +19,4 @@ button{
     border-radius: 8px;
     margin-bottom: 15px;
     cursor:pointer;
-    
 }
