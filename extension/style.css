@@ -15,4 +15,6 @@ button{
     font-family:'Courier New', Courier, monospace;
     border-radius: 8px;
     margin-bottom: 15px;
+    cursor:pointer;
+    
 }
