@@ -10,6 +10,9 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+h1{
+    font-size: 40px;
+}
 button{
     width: 120px;
     height: 30px;
