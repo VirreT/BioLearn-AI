@@ -38,6 +38,9 @@ app.post('/chat', async (req, res) => {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${openaiApiKey}`,
       },
+
+      max_token: 100
+      
     });
 
     // Send the OpenAI API response back to the client
