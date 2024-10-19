@@ -8,7 +8,7 @@
         "scripting"
     ],
     "background": {
-        "service_worker": "extension/background.js"
+        "service_worker": "BioLearn-AI/extension/background.js"
     },
     "action": {
         "default_popup": "extension/popup.html",
