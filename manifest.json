@@ -11,7 +11,7 @@
         "service_worker": "extension/background.js"
     },
     "action": {
-        "default_popup": "extension/popup.html",
+        "default_popup": "/extension/popup.html",
         "default_icon": {
             "128": "assets/icon-128-1.png"
         },
