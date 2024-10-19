@@ -1,12 +1,12 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: #1c2129;
+    background-color: #333333;
     color: aliceblue;
 }
 button{
     width: 120px;
     height: 30px;
-    background-color: #1c2129;
+    background-color: #333333;
     color: aliceblue;
     border-color: aliceblue;
     border-width: 1px;
