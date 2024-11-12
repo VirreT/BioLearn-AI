@@ -7,7 +7,7 @@ if you want to run this server on your machine follow these steps.
 
 3. Type "npm init -y". This will intialize the folder and make it ready for Node.js
 
-4. Type "npm install express axios cors dotenv" in admin command prompt inside the folder. This will install all the dependencies required and will get the code to run
+4. Type "npm install express axios dotenv" in admin command prompt inside the folder. This will install all the dependencies required and will get the code to run
 
 5. Move the "server.js" file into this folder
 
