@@ -8,6 +8,7 @@ document.getElementById("extractText").addEventListener("click", () => {
         function: () => {
           // Extract text from the page
         return document.body.innerText;
+        window.open('/BIOLEARN-AI/notes-site/note-site.html');
         },
     }, (results) => {
         // Display the extracted text in the popup
