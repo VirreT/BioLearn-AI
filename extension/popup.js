@@ -19,4 +19,4 @@ document.getElementById("extractText").addEventListener("click", () => {
         window.open(`textDisplay.html?text=${encodedText}`, '_blank', 'width=600,height=400');
     });
     });
-}); 
+});
