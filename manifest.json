@@ -17,6 +17,12 @@
         },
         "default_title": "BioLearn AI"
     },
+
+    "web_accessible_resources": {
+      "resources": ["textDisplay.html", "textDisplay.js"],
+      "matches": ["<all_urls>"]
+    },
+
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
