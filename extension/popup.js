@@ -39,8 +39,17 @@ document.getElementById("extractText").addEventListener("click", () => {
             },
             body: JSON.stringify({
                 model: 'gpt-4o-mini',
-                messages: [{ role: 'user', content: extractedText }],
-                max_tokens: 100,
+                messages: [
+                    {
+                        role: 'system',
+                        content: 'You are an experienced biology teacher. Respond to user inputs with a summary and a few bullet points to focus on. Get rid of all text formatting in your response.'
+                    },
+                    {
+                        role: 'user',
+                        content: extractedText
+                    }
+                ],
+                max_tokens: 1000,
             }),
         })
         .then((response) => {

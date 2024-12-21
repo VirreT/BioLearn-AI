@@ -51,9 +51,9 @@ app.get('/', (req, res) => {
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                model: 'gpt-4',
+                model: 'gpt-4o-mini',
                 messages: [{ role: 'user', content: message }],
-                max_tokens: 100
+                max_tokens: 1000
               })
             });
 
