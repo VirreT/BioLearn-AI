@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Proxy</title>
+</head>
+<body>
+  <h1>Chat with ChatGPT</h1>
+  
+  <form id="chatForm">
+    <label>
+      Your Message:
+      <input type="text" id="msg" placeholder="Type your message here" required>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+  
+  <h2>Response:</h2>
+  <div id="output"></div> <!-- Div to display the response -->
+
+  <script>
+    // Event listener for form submission
+    document.getElementById('chatForm').onsubmit = async function(event) {
+      event.preventDefault();
+      
+      const message = document.getElementById('msg').value;
+      const outputDiv = document.getElementById('output');
+      
+      // Display loading text while waiting for response
+      outputDiv.textContent = 'Loading...';
+
+      try {
+        // Send POST request to /chat endpoint with user message
+        const response = await fetch('/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: 'gpt-4o-mini',
+                messages: [
+                    {
+                        role: 'system',
+                        content: 'You are an experienced biology teacher. Respond to user inputs with a summary and a few bullet points to focus on. Get rid of all text formatting in your response.'
+                    },
+                    {
+                        role: 'user',
+                        content: message
+                    }
+                ],
+                max_tokens: 1000,
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to fetch response');
+        }
+
+        // Parse JSON response and display message content
+        const data = await response.json();
+        outputDiv.textContent = data.choices[0].message.content;
+
+      } catch (error) {
+        // Display error message if request fails
+        outputDiv.textContent = 'Error: ' + error.message;
+      }
+    };
+  </script>
+</body>
+</html>
