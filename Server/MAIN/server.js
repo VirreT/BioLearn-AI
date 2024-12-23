@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Serve static files (HTML, CSS, JS)
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'serverFace.html'));
+  res.sendFile(path.join(__dirname, 'mainPage.html'));
 });
 
 // API endpoint to handle chat requests
