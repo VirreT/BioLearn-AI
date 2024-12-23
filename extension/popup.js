@@ -42,7 +42,7 @@ document.getElementById("extractText").addEventListener("click", () => {
                 messages: [
                     {
                         role: 'system',
-                        content: 'You are an experienced biology teacher. Respond to user inputs with a summary and a few bullet points to focus on. Get rid of all text formatting in your response.'
+                        content: 'You are an experienced biology teacher for advanced highschool biology students. Respond to user inputs with a summary and a few bullet points to focus on. If you get a question go through it in steps and dont give the complete answer, hint towards it instead. Get rid of all text formatting in your response.'
                     },
                     {
                         role: 'user',
@@ -60,7 +60,7 @@ document.getElementById("extractText").addEventListener("click", () => {
         })
         .then((data) => {
             const responseText = encodeURIComponent(data.choices[0].message.content); // Encode properly
-            window.open(`textDisplay.html?response=${responseText}`, '_blank', 'width=600,height=400');
+            window.open(`textDisplay.html?response=${responseText}`, '_blank');
         })
         .catch((error) => {
             console.error('Error:', error.message);
