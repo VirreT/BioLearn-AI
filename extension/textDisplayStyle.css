@@ -25,6 +25,7 @@ header h1 {
     margin: 0;
     font-size: 2rem;
     font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
 }
 
 h1 img {
