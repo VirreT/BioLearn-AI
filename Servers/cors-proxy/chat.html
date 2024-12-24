@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT API Example with CORS Proxy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .chat-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .message-box {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .response {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chat-container">
+  <h1>Chat with ChatGPT (Using CORS Proxy)</h1>
+  <textarea id="userMessage" class="message-box" rows="5" placeholder="Type your message here..."></textarea>
+  <button id="sendMessage">Send</button>
+
+  <div id="responseBox" class="response"></div>
+</div>
+
+<script>
+  document.getElementById('sendMessage').addEventListener('click', async () => {
+    const userMessage = document.getElementById('userMessage').value;
+    if (!userMessage) return alert('Please enter a message');
+
+    const responseBox = document.getElementById('responseBox');
+    responseBox.innerText = 'Waiting for response...';
+
+    try {
+      const response = await fetch('http://192.168.0.127:8080/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: userMessage }]
+        })
+      });
+
+      const data = await response.json();
+      const reply = data.choices[0].message.content;
+      responseBox.innerText = reply;
+    } catch (error) {
+      responseBox.innerText = 'Error: ' + error.message;
+    }
+  });
+</script>
+
+</body>
+</html>
