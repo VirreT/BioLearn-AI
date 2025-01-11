@@ -32,6 +32,11 @@ h1 img {
     margin-right: 10px;
 }
 
+#copybtn{
+    color: #1c2129;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 /* Response section styles */
 #responseContainer {
     display: flex;
