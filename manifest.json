@@ -4,12 +4,12 @@
     "version": "0.1.0",
     "description": "Ditt AIdrivna studieverktyg för biologi",
     "permissions": [
-        "activeTab", 
+        "activeTab",
         "scripting"
     ],
-    "background": {
-        "service_worker": "extension/background.js"
-    },
+    "host_permissions": [
+        "http://localhost:8080/*" 
+    ],
     "action": {
         "default_popup": "extension/popup.html",
         "default_icon": {
@@ -17,10 +17,10 @@
         },
         "default_title": "BioLearn AI"
     },
-    "content_scripts": [
+    "web_accessible_resources": [
         {
-            "matches": ["<all_urls>"],
-            "js": ["extension/content.js"]
+            "resources": ["textDisplay.html", "textDisplay.js"],
+            "matches": ["<all_urls>"]
         }
     ]
 }

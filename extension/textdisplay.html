@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioLearnAI - Response Display</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            display: inline-flex;
+            align-items: center;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        h1 img {
+            margin-right: 10px;
+        }
+
+        /* Response section styles */
+        #responseContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            font-size: 1.2rem;
+            font-weight: bold;
+            line-height: 1.5;
+            width: 80%;
+        }
+
+        #responseContainer p{
+            text-align: center;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="/assets/icon-popup.png" alt="icon">BioLearnAI</h1>
+    </header>
+
+    <div id="responseContainer"></div>
+
+    <footer>
+        <p>2024 BioLearnAI</p>
+    </footer>
+
+    <script src="textDisplay.js"></script>
+</body>
+</html>

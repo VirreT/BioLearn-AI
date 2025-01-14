@@ -1,39 +1,38 @@
 document.getElementById("extractText").addEventListener("click", () => {
-<<<<<<< HEAD
-chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    if (tabs.length === 0) {
-        alert("No active tab found!");
-        return;
-    }
+  // Query the active tab in the current window
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs.length === 0) {
+          alert("No active tab found!");
+          return;
+      }
 
-    chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        function: () => {
-            return document.body.innerText;
-=======
-    // Query the active tab in the current window
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       // Inject the content script into the active tab
-    chrome.scripting.executeScript({
-        target: { tabId: tabs[0].id },
-        function: () => {
-          // Extract text from the page
-        return document.body.innerText;
->>>>>>> parent of 63648b6 (Merge branch 'main' of https://github.com/VirreT/BioLearn-AI)
-        },
-    }, (results) => {
-        // Display the extracted text in the popup
-        console.log(results[0].result);
+      chrome.scripting.executeScript({
+          target: { tabId: tabs[0].id },
+          function: () => {
+              // Extract text from the page
+              return document.body.innerText;
+          },
+      }, (results) => {
+          if (chrome.runtime.lastError) {
+              console.error("Script injection failed:", chrome.runtime.lastError.message);
+              alert("Failed to extract text. Check console for details.");
+              return;
+          }
 
-        const encodedText = encodeURIComponent(extractText);
+          if (!results || !results[0]) {
+              alert("No text was extracted.");
+              return;
+          }
 
-<<<<<<< HEAD
-        const extractedText = results[0].result;
-        console.log("Extracted Text:", extractedText);
+          const extractedText = results[0].result; // Use extracted text
+          console.log("Extracted Text:", extractedText);
 
-        const encodedText = encodeURIComponent(extractedText);
+          // Encode the extracted text for safe use in a URL
+          const encodedText = encodeURIComponent(extractedText);
 
-        fetch('http://localhost:8080/chat', {
+          // Send the extracted text to the API
+          fetch('http://localhost:8080/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -60,17 +59,14 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             return response.json();
         })
         .then((data) => {
-            const responseText = encodeURIComponent(data.choices[0].message.content);
+            const responseText = encodeURIComponent(data.choices[0].message.content); // Encode properly
             window.open(`textDisplay.html?response=${responseText}`, '_blank');
         })
         .catch((error) => {
             console.error('Error:', error.message);
             alert('Error: ' + error.message);
         });
-=======
-        // Open the new window and pass the extracted text
-        window.open(`textDisplay.html?text=${encodedText}`, '_blank', 'width=600,height=400');
->>>>>>> parent of 63648b6 (Merge branch 'main' of https://github.com/VirreT/BioLearn-AI)
+      });
     });
-    });
-}); 
+
+});
