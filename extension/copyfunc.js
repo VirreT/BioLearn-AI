@@ -1,14 +1,15 @@
 function copyText() {
-    // Get the text field
-    var copyText = document.getElementById("myInput");
-  
-    // Select the text field
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
-  
-     // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.value);
-  
-    // Alert the copied text
-    alert("Copied the text: " + copyText.value);
-  }
+    // Get the content of the response container
+    var textToCopy = document.getElementById("responseContainer").innerText;
+
+    // Create a temporary text area to select the text
+    var textArea = document.createElement("textarea");
+    textArea.value = textToCopy; // Set the text area content to the text to copy
+    document.body.appendChild(textArea); // Append the text area to the document
+    textArea.select(); // Select the content inside the text area
+    document.execCommand("copy"); // Copy the selected content to clipboard
+    document.body.removeChild(textArea); // Remove the text area after copying
+
+    // Optional: Alert the user or change button text to show that text has been copied
+    alert("Copied to clipboard!");
+}
