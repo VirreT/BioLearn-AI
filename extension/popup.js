@@ -1,16 +1,13 @@
 document.getElementById("extractText").addEventListener("click", () => {
-  // Query the active tab in the current window
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length === 0) {
         alert("No active tab found!");
         return;
     }
 
-    // Inject the content script into the active tab
     chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
         function: () => {
-            // Extract text from the page
             return document.body.innerText;
         },
     }, (results) => {
@@ -25,13 +22,11 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             return;
         }
 
-        const extractedText = results[0].result; // Use extracted text
+        const extractedText = results[0].result;
         console.log("Extracted Text:", extractedText);
 
-        // Encode the extracted text for safe use in a URL
         const encodedText = encodeURIComponent(extractedText);
 
-        // Send the extracted text to the API
         fetch('http://localhost:8080/chat', {
             method: 'POST',
             headers: {
@@ -59,7 +54,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             return response.json();
         })
         .then((data) => {
-            const responseText = encodeURIComponent(data.choices[0].message.content); // Encode properly
+            const responseText = encodeURIComponent(data.choices[0].message.content);
             window.open(`textDisplay.html?response=${responseText}`, '_blank');
         })
         .catch((error) => {
