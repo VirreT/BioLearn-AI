@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatGPT Proxy</title>
-  <link rel="stylesheet" href="mainpagestyle.css">
+  <link rel="stylesheet" type="text/css" href="mainpagestyle.css">
 </head>
 <body>
   <header>
@@ -19,55 +19,6 @@
           <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg></a>
     </div>
 </header>
-
-<script>
-     // Event listener for form submission
-     document.getElementById('chatForm').onsubmit = async function(event) {
-      event.preventDefault();
-      
-      const message = document.getElementById('msg').value;
-      const outputDiv = document.getElementById('output');
-      
-      // Display loading text while waiting for response
-      outputDiv.textContent = 'Loading...';
-
-      try {
-        // Send POST request to /chat endpoint with user message
-        const response = await fetch('/chat', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            model: 'gpt-4o-mini',
-                messages: [
-                    {
-                        role: 'system',
-                        content: 'You are an experienced biology teacher. Respond to user inputs with a summary and a few bullet points to focus on. Get rid of all text formatting in your response.'
-                    },
-                    {
-                        role: 'user',
-                        content: message
-                    }
-                ],
-                max_tokens: 1000,
-          })
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch response');
-        }
-
-        // Parse JSON response and display message content
-        const data = await response.json();
-        outputDiv.textContent = data.choices[0].message.content;
-
-      } catch (error) {
-        // Display error message if request fails
-        outputDiv.textContent = 'Error: ' + error.message;
-      }
-    };
-</script>
 
 <main>
   <img id="backgroundImage" src="/assets/mainSiteBackground.png" alt="Background Image">
@@ -100,6 +51,55 @@
   <div id="output"></div> <!-- Div to display the response -->
 
 </main>
+
+<script>
+  // Event listener for form submission
+  document.getElementById('chatForm').onsubmit = async function(event) {
+   event.preventDefault();
+   
+   const message = document.getElementById('msg').value;
+   const outputDiv = document.getElementById('output');
+   
+   // Display loading text while waiting for response
+   outputDiv.textContent = 'Loading...';
+
+   try {
+     // Send POST request to /chat endpoint with user message
+     const response = await fetch('/chat', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json'
+       },
+       body: JSON.stringify({
+         model: 'gpt-4o-mini',
+             messages: [
+                 {
+                     role: 'system',
+                     content: 'You are an experienced biology teacher. Respond to user inputs with a summary and a few bullet points to focus on. Get rid of all text formatting in your response.'
+                 },
+                 {
+                     role: 'user',
+                     content: message
+                 }
+             ],
+             max_tokens: 1000,
+       })
+     });
+
+     if (!response.ok) {
+       throw new Error('Failed to fetch response');
+     }
+
+     // Parse JSON response and display message content
+     const data = await response.json();
+     outputDiv.textContent = data.choices[0].message.content;
+
+   } catch (error) {
+     // Display error message if request fails
+     outputDiv.textContent = 'Error: ' + error.message;
+   }
+ };
+</script>
   
 
   <footer>
