@@ -1,4 +1,5 @@
 document.getElementById("extractText").addEventListener("click", () => {
+<<<<<<< HEAD
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs.length === 0) {
         alert("No active tab found!");
@@ -9,19 +10,24 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         target: { tabId: tabs[0].id },
         function: () => {
             return document.body.innerText;
+=======
+    // Query the active tab in the current window
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      // Inject the content script into the active tab
+    chrome.scripting.executeScript({
+        target: { tabId: tabs[0].id },
+        function: () => {
+          // Extract text from the page
+        return document.body.innerText;
+>>>>>>> parent of 63648b6 (Merge branch 'main' of https://github.com/VirreT/BioLearn-AI)
         },
     }, (results) => {
-        if (chrome.runtime.lastError) {
-            console.error("Script injection failed:", chrome.runtime.lastError.message);
-            alert("Failed to extract text. Check console for details.");
-            return;
-        }
+        // Display the extracted text in the popup
+        console.log(results[0].result);
 
-        if (!results || !results[0]) {
-            alert("No text was extracted.");
-            return;
-        }
+        const encodedText = encodeURIComponent(extractText);
 
+<<<<<<< HEAD
         const extractedText = results[0].result;
         console.log("Extracted Text:", extractedText);
 
@@ -61,7 +67,10 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
             console.error('Error:', error.message);
             alert('Error: ' + error.message);
         });
+=======
+        // Open the new window and pass the extracted text
+        window.open(`textDisplay.html?text=${encodedText}`, '_blank', 'width=600,height=400');
+>>>>>>> parent of 63648b6 (Merge branch 'main' of https://github.com/VirreT/BioLearn-AI)
     });
     });
-
-});
+}); 
