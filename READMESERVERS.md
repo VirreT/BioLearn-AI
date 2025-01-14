@@ -1,3 +1,4 @@
+# How to set up the server
 
 if you want to run this server on your machine follow these steps.
 

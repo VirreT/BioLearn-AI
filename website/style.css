@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c2129;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1c2129;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0  10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#logo  h1 {
+    display: inline-flex;
+    align-items: center;
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+
+#logo img {
+    margin-right: 10px;
+}
+
+.sociallinksfooter{
+    max-width: 1000px;
+}
