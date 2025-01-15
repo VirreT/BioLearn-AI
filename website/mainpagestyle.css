@@ -30,6 +30,15 @@ header {
     margin-right: 10px;
 }
 
+main{
+    margin-top: -50%;
+    margin-left: 15%;
+}
+
 .sociallinksfooter{
     max-width: 1000px;
+}
+
+footer .sociallinksfooter{
+    margin-left: 100px;
 }
