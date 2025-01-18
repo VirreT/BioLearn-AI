@@ -30,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // Append the UL to the response container
         responseContainer.appendChild(ul);
     } else {
-        responseContainer.textContent = 'Kos OMak.';
+        responseContainer.textContent = `No response available: "${console.error()}"`;
+        ;
     }
 });
