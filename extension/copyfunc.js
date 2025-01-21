@@ -1,5 +1,5 @@
 document.getElementById("copybtn").addEventListener("click", function() {
-    var copyText = document.getElementById("responseContainer").textContent; // Or .innerText
+    var copyText = document.getElementById("responseContainer").textContent;
 
     navigator.clipboard.writeText(copyText)
         .then(function() {
