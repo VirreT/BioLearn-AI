@@ -25,7 +25,6 @@ document.getElementById("extractText").addEventListener("click", () => {
           const extractedText = results[0].result;
           console.log("Extracted Text:", extractedText);
 
-          const encodedText = encodeURIComponent(extractedText);
 
           fetch('http://localhost:8080/chat', {
             method: 'POST',
@@ -63,5 +62,4 @@ document.getElementById("extractText").addEventListener("click", () => {
         });
       });
     });
-
 });

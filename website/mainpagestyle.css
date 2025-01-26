@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -38,14 +39,14 @@ header {
 
 #sociallinksheader svg:hover {
     transform: scale(1.1);
-    fill: #00aaff; /* Change color on hover */
+    fill: #00aaff; 
 }
 
 #sociallinksheader {
     margin-right: 25px;
     display: flex;
     align-items: center;
-    gap: 20px; /* Adds space between icons */
+    gap: 20px; 
 }
 
 #sociallinksheader a {
@@ -54,7 +55,7 @@ header {
 }
 
 #sociallinksheader svg {
-    width: 35px; /* Standardize icon size */
+    width: 35px;
     height: 35px;
     fill: aliceblue;
     transition: transform 0.3s, fill 0.3s;
@@ -62,5 +63,5 @@ header {
 
 #sociallinksheader svg:hover {
     transform: scale(1.2);
-    fill: #086c34; /* Change color on hover */
+    fill: #086c34; 
 }

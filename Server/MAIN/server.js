@@ -2,16 +2,14 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-
 const app = express();
 const port = 8080;
 
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../website/mainPage.html'));
+  res.sendFile(path.join(__dirname, '../../website/mainPage.html/'));
 });
-
 app.post('/chat', async (req, res) => {
   try {
     const response = await axios.post(
