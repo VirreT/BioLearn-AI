@@ -37,31 +37,26 @@ header {
     margin-right: 10px;
 }
 
-#sociallinksheader svg:hover {
-    transform: scale(1.1);
-    fill: #00aaff; 
-}
-
-#sociallinksheader {
+.sociallinks {
     margin-right: 25px;
     display: flex;
     align-items: center;
     gap: 20px; 
 }
 
-#sociallinksheader a {
+.sociallinks a {
     text-decoration: none;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
 }
 
-#sociallinksheader svg {
+.sociallinks svg {
     width: 35px;
     height: 35px;
-    fill: aliceblue;
+    fill: rgb(255, 255, 255);
     transition: transform 0.3s, fill 0.3s;
 }
 
-#sociallinksheader svg:hover {
+.sociallinks svg:hover {
     transform: scale(1.2);
     fill: #086c34; 
 }
