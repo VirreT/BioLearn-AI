@@ -1,4 +1,7 @@
 document.getElementById("extractText").addEventListener("click", () => {
+    document.getElementById("extractText").disabled = true;
+    document.getElementById("extractText").style.display = "none";
+    document.getElementById("loading").style.display = "flex";
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (tabs.length === 0) {
           alert("No active tab found!");
