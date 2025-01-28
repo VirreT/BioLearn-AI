@@ -63,6 +63,11 @@ header {
     fill: #086c34; 
 }
 
+main{
+    flex: 1;
+    padding: 100px;
+}
+
 #backdropGrid {
     position: absolute;
     top: 0;
