@@ -10,6 +10,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../../website/mainPage.html/'));
 });
+
 app.post('/chat', async (req, res) => {
   try {
     const response = await axios.post(
