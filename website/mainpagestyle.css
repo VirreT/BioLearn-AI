@@ -63,13 +63,38 @@ header {
     fill: #086c34; 
 }
 
+main{
+    flex: 1;
+    padding: 100px;
+}
+
+#backdropGrid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 footer{
     font-family: 'Courier New', Courier, monospace;
     background-color: #1c2129;
     color: white;
-    padding: 1rem 100px;
+    margin:0;
+    padding: 0;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#footercontent{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
 }
