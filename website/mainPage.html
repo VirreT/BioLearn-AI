@@ -202,18 +202,15 @@
 </main>
 
 <script>
-  // Event listener for form submission
   document.getElementById('chatForm').onsubmit = async function(event) {
    event.preventDefault();
    
    const message = document.getElementById('msg').value;
    const outputDiv = document.getElementById('output');
    
-   // Display loading text while waiting for response
    outputDiv.textContent = 'Loading...';
 
    try {
-     // Send POST request to /chat endpoint with user message
      const response = await fetch('/chat', {
        method: 'POST',
        headers: {
@@ -239,12 +236,10 @@
        throw new Error('Failed to fetch response');
      }
 
-     // Parse JSON response and display message content
      const data = await response.json();
      outputDiv.textContent = data.choices[0].message.content;
 
    } catch (error) {
-     // Display error message if request fails
      outputDiv.textContent = 'Error: ' + error.message;
    }
  };
