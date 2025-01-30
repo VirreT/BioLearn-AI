@@ -65,16 +65,20 @@ header {
 
 main{
     flex: 1;
-    padding: 100px;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 #backdropGrid {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 95vw;
+    width: 100vw;
     height: 100vh;
+    max-height: 700px;
     z-index: -1;
+    overflow: hidden;
 }
 
 footer{
