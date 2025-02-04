@@ -133,18 +133,24 @@ strong{
 }
 
 #chatContainer{
-    max-width: 30%;
+    max-width: 33%;
     margin-right: 7%;
     display: flex;
     gap: 1rem;
+}
+
+#msg {
+    opacity: 1; /* Keep the textarea itself visible */
+    color: transparent; /* Make the text initially invisible */
+    transition: color 1s ease-in-out; /* Transition for the text color */
 }
 
 textarea{
     font-size: 1rem;
     padding: 10px;
     border-radius: 10px;
-    width: 500px;
-    height: 175px;
+    width: 420px;
+    height: 110px;
     border: none;
     background-color: #086c3356;
     color: white;
