@@ -8,8 +8,9 @@ body {
     color: aliceblue;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
+
+
 
 header {
     background-color: #1c2129;
@@ -29,7 +30,7 @@ header {
 
 #logo h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline-flex;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
@@ -53,8 +54,8 @@ header {
 }
 
 .sociallinks svg {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     fill: rgb(255, 255, 255);
     transition: transform 0.3s, fill 0.3s;
 }
@@ -64,10 +65,16 @@ header {
     fill: #086c34; 
 }
 
+main{
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+    margin-bottom: -30px;
+}
+
 #mainContainer{
     max-width: 25%;
     margin-left: 10%;
-    margin-top: 100px;
     flex: 1;
     padding: 100px;
     font-family: 'Roboto', sans-serif;
@@ -78,9 +85,9 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    max-height: 700px;
+    width: 75vw;
+    height: 75vh;
+    max-height: 200%;
     z-index: -1;
     overflow: hidden;
 }
@@ -112,16 +119,23 @@ header {
     cursor: pointer;
 }
 
+#chatContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 footer{
     font-family: 'Courier New', Courier, monospace;
     background-color: #1c2129;
     color: white;
-    margin:0;
+    margin-bottom:0;
     padding: 0;
     display: block;
     align-items: center;
     justify-content: center;
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+    height: 100px;
 }
 
 #footercontent{
