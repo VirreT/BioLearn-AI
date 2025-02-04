@@ -81,7 +81,7 @@ li {
 }
 
 #copybtn{
-    max-width: 7%;
+    max-width: 75px;
     background-color: #33333300;
     color: aliceblue;
     border-color: aliceblue;
