@@ -92,8 +92,9 @@ main{
     overflow: hidden;
 }
 
-#mainheader{
-    text-shadow: 4px 3px 3px #047c38;
+
+h1{
+    text-shadow: 4px 3px 2px #047c38;
 }
 
 #downloadIcon{
@@ -132,9 +133,38 @@ strong{
 }
 
 #chatContainer{
+    max-width: 30%;
+    margin-right: 7%;
     display: flex;
-    flex-direction: column;
     gap: 1rem;
+}
+
+textarea{
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    height: 175px;
+    border: none;
+    background-color: #086c3356;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+textarea::placeholder{
+    font-size: 1rem;
+    color: rgba(229, 229, 229, 0.804);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#submitButton{
+    padding: 9px;
+    margin-top: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #086c3356;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 225px;
 }
 
 footer{
