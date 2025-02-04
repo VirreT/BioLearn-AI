@@ -39,6 +39,6 @@ window.onload = function() {
     var msgElement = document.getElementById("msg");
     msgElement.value = randomSuggestion;
     setTimeout(function() {
-        msgElement.style.color = 'aliceblue';
+        msgElement.style.color = 'white';
     }, 0);
 };
