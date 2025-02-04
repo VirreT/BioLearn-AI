@@ -73,8 +73,8 @@ main{
 }
 
 #mainContainer{
-    max-width: 30%;
-    margin-left: 7%;
+    width: 25%;
+    margin-left: 5%;
     flex: 1;
     padding: 100px;
     font-family: 'Roboto', sans-serif;
@@ -102,7 +102,8 @@ main{
     margin-left: 10px;
 }
 
-#downloadButton{
+.globalButton{
+    margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
     color: white;
@@ -113,7 +114,7 @@ main{
     width: 225px;
 }
 
-#downloadButton:hover{
+.globalButton:hover{
     transition: transform 0.3s;
     background-color: #086c33ae;
     cursor: pointer;
@@ -132,8 +133,8 @@ strong{
 }
 
 #chatContainer{
-    max-width: 33%;
-    margin-right: 7%;
+    width: 33%;
+    margin-right: 10%;
     display: flex;
     gap: 1rem;
 }
@@ -159,17 +160,6 @@ textarea::placeholder{
     font-size: 1rem;
     color: rgba(229, 229, 229, 0.804);
     font-family: 'Courier New', Courier, monospace;
-}
-
-#submitButton{
-    padding: 9px;
-    margin-top: 10px;
-    border-radius: 10px;
-    color: white;
-    background-color: #086c3356;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    width: 225px;
 }
 
 footer{
