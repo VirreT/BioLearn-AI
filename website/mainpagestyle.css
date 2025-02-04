@@ -78,7 +78,6 @@ main{
     flex: 1;
     padding: 100px;
     font-family: 'Roboto', sans-serif;
-    background-color: #1c21294a;
 }
 
 #backdropGrid {
@@ -93,7 +92,7 @@ main{
 }
 
 
-h1{
+.mainHeader{
     text-shadow: 4px 3px 2px #047c38;
 }
 
@@ -140,9 +139,9 @@ strong{
 }
 
 #msg {
-    opacity: 1; /* Keep the textarea itself visible */
-    color: transparent; /* Make the text initially invisible */
-    transition: color 1s ease-in-out; /* Transition for the text color */
+    opacity: 1;
+    color: transparent;
+    transition: color 1s ease-in-out;
 }
 
 textarea{
