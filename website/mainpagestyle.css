@@ -110,7 +110,7 @@ main{
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
-    width: 200px;
+    width: 225px;
 }
 
 #downloadButton:hover{
