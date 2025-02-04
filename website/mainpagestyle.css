@@ -73,8 +73,8 @@ main{
 }
 
 #mainContainer{
-    max-width: 25%;
-    margin-left: 10%;
+    max-width: 30%;
+    margin-left: 7%;
     flex: 1;
     padding: 100px;
     font-family: 'Roboto', sans-serif;
@@ -117,6 +117,18 @@ main{
     transition: transform 0.3s;
     background-color: #086c33ae;
     cursor: pointer;
+}
+
+#downloadDescription{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.66rem;
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+strong{
+    color: #086c34;
+    font-size: 0.8rem;
 }
 
 #chatContainer{
