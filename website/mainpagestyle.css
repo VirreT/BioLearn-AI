@@ -65,17 +65,22 @@ header {
     fill: #086c34; 
 }
 
+#topHeader{
+    text-align: center;
+    margin-top: 100px;
+}
+
 main{
     display: flex;
     align-items: center;
-    margin-top: -30px;
     margin-bottom: -30px;
+    margin-top: -200px;
     height: 88vh;
 }
 
 #mainContainer{
-    width: 25%;
-    margin-left: 5%;
+    width: 33%;
+    margin-left: 10%;
     flex: 1;
     padding: 100px;
     font-family: 'Roboto', sans-serif;
@@ -95,6 +100,7 @@ main{
 
 .mainHeader{
     text-shadow: 4px 3px 2px #047c38;
+    font-size: 250%;
 }
 
 #downloadIcon{
@@ -136,6 +142,10 @@ strong{
 #chatContainer{
     width: 33%;
     margin-right: 10%;
+    margin-bottom: 120px;
+    flex: 1;
+    padding: 100px;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     gap: 1rem;
 }
@@ -150,8 +160,8 @@ textarea{
     font-size: 1rem;
     padding: 10px;
     border-radius: 10px;
-    width: 420px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
     border: none;
     background-color: #086c3356;
     color: white;
@@ -159,7 +169,7 @@ textarea{
 }
 textarea::placeholder{
     font-size: 1rem;
-    color: rgba(229, 229, 229, 0.804);
+    color: rgba(229, 229, 229, 0.719);
     font-family: 'Courier New', Courier, monospace;
 }
 
