@@ -74,7 +74,7 @@ header {
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5;
-    width: 80%;
+    width: 100%;
     text-align: center;
 }
 
@@ -107,9 +107,13 @@ li {
     color: #333;
 }
 
+main{
+    padding-left:10%;
+    padding-right:10%;
+}
 #buttoncontent {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     margin-top: 2%;
 }
@@ -121,7 +125,6 @@ li {
     background-color: #086c3356;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
-    align-items: center;
     justify-content: center; 
     width: 60px; 
     text-align: center;
