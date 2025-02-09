@@ -1,7 +1,14 @@
 
   document.getElementById('chatForm').onsubmit = async function(event) {
-   event.preventDefault();
+    event.preventDefault();
+    const globalButton = document.getElementById("globalButton");
+    const loading = document.getElementById("loading");
+
    
+    globalButton.disabled = true;
+    globalButton.style.display = "none";
+    loading.style.display = "flex";
+
    const message = document.getElementById('msg').value;
    const outputDiv = document.getElementById('output');
    
