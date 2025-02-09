@@ -56,6 +56,12 @@ button:hover{
     align-items: center;
 }
 
+#loadingText{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -72,4 +78,5 @@ button:hover{
 
 #loadingIcon{
     animation: pulse 1.5s infinite;
+    max-width: 10%;
 }
