@@ -25,11 +25,11 @@ const SUGGESTIONtext = [
     "How does the nervous system transmit signals?",
     "What is the function of the endocrine system?",
     "Describe the process of osmosis and diffusion.",
-    "How do vaccines work?",
+    "Explain how vaccines work?",
     "What are the different types of blood cells and their functions?",
     "Explain the process of gene expression.",
     "What is the role of mitochondria in energy production?",
-    "How do antibiotics work?",
+    "Explain how antibiotics work?",
     "Describe the structure and function of antibodies."
 ];
 
