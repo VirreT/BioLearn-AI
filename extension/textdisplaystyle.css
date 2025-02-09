@@ -12,22 +12,54 @@ body {
 header {
     background-color: #1c2129;
     color: white;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0  10px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
-header h1 {
+#logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
     display: inline-flex;
     align-items: center;
-    margin: 0;
-    font-size: 2rem;
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 }
 
-h1 img {
+#logo img {
     margin-right: 10px;
+}
+
+.sociallinks {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+
+.sociallinks a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.sociallinks svg {
+    width: 30px;
+    height: 30px;
+    fill: rgb(255, 255, 255);
+    transition: transform 0.3s, fill 0.3s;
+}
+
+.sociallinks svg:hover {
+    transform: scale(1.2);
+    fill: #086c34; 
 }
 
 #responseContainer {
@@ -37,30 +69,33 @@ h1 img {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     margin: 2rem auto;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5;
     width: 80%;
-}
-
-#responseContainer{
     text-align: center;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
+#footercontent {
+    font-family: 'Courier New', Courier, monospace;
     background-color: #1c2129;
-    box-shadow: 0  -10px 10px rgba(0, 0, 0, 0.5);
     color: white;
-    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
 }
 
-footer p {
-    margin: 0;
+footer #copyright {
+    margin: 0 auto; 
 }
+
 
 ul {
     padding-left: 20px;
@@ -72,24 +107,28 @@ li {
     color: #333;
 }
 
-#buttoncontent{
+#buttoncontent {
     display: flex;
-    justify-content:end;
+    justify-content: center;
     align-items: center;
-    margin-right: 7%;
-    margin-top: 7%;
+    margin-top: 2%;
 }
 
-#copybtn{
-    max-width: 75px;
-    background-color: #33333300;
-    color: aliceblue;
-    border-color: aliceblue;
-    border-width: 3px;
-    font-family:'Courier New', Courier, monospace;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    cursor:pointer;
-    font-weight: bold;
-    font-size: 20px;
+#copybtn {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #086c3356;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 60px; 
+    text-align: center;
+}
+
+#copybtn:hover {
+    transition: transform 0.3s;
+    background-color: #086c33ae;
+    cursor: pointer;
 }
