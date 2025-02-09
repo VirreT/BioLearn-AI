@@ -177,6 +177,9 @@ footer{
     font-family: 'Courier New', Courier, monospace;
     background-color: #1c2129;
     color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     margin-bottom:0;
     padding: 0;
     display: block;
