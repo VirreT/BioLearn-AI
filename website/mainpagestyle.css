@@ -184,6 +184,7 @@ textarea{
     background-color: #086c3356;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    resize: none;
 }
 textarea::placeholder{
     font-size: 1rem;
