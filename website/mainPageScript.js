@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     document.getElementById('chatForm').onsubmit = async function(event) {
         event.preventDefault();
-        const globalButton = document.getElementById("globalButton");
+        const globalButton = document.getElementById("generateButton");
         const loading = document.getElementById("loading");
 
         globalButton.disabled = true;
@@ -9,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loading.style.display = "flex";
 
         const message = document.getElementById('msg').value;
-        const outputDiv = document.getElementById('output');
-
-        outputDiv.textContent = 'Loading...';
 
         try {
             const response = await fetch('http://localhost:8080/chat', {
