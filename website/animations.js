@@ -22,17 +22,17 @@ function typeWriter(element, text, delay = 70) {
 
 function addGlowingEffect(element) {
     element.style.position = 'relative';
-    element.style.animation = 'glow 2s infinite';
+    element.style.animation = 'glow 1.5s infinite';
 }
 
 const style = document.createElement('style');
 style.innerHTML = `
 @keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #086c34, 0 0 10px #086c34, 0 0 15px #086c34, 0 0 20px #086c34, 0 0 25px #086c34, 0 0 30px #086c34;
+    0%, 100% {
+        text-shadow: 0 0 10px #086c34, 0 0 20px #086c34, 0 0 30px #086c34, 0 0 40px #086c34, 0 0 50px #086c34, 0 0 60px #086c34;
     }
-    100% {
-        text-shadow: 0 0 10px #086c34, 0 0 15px #086c34, 0 0 20px #086c34, 0 0 25px #086c34, 0 0 30px #086c34, 0 0 35px #086c34;
+    50% {
+        text-shadow: 0 0 20px #086c34, 0 0 30px #086c34, 0 0 40px #086c34, 0 0 50px #086c34, 0 0 60px #086c34, 0 0 70px #086c34;
     }
 }
 `;
