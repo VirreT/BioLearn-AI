@@ -15,16 +15,11 @@ window.addEventListener('DOMContentLoaded', () => {
         ul.style.listStyleType = 'disc';
 
         const firstPart = splitResponse.shift();
+        const lastPart = splitResponse.pop(); 
 
         const firstPartText = document.createElement('p');
-
-        if (firstPart.startsWith('§')) { 
-            firstPartText.textContent = firstPart.substring(1); 
-            questionContainer.appendChild(firstPartText); 
-        } else {
-            firstPartText.textContent = firstPart;
-            responseContainer.appendChild(firstPartText);
-        }
+        firstPartText.textContent = firstPart;
+        responseContainer.appendChild(firstPartText);
 
         splitResponse.forEach((text) => {
             const li = document.createElement('li');
@@ -33,6 +28,12 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         responseContainer.appendChild(ul);
+
+        if (lastPart) { 
+            const lastPartText = document.createElement('p'); 
+            lastPartText.textContent = lastPart; 
+            questionContainer.appendChild(lastPartText); 
+        }
     } else {
         responseContainer.textContent = `No response available: "${console.error()}"`;
         ;
