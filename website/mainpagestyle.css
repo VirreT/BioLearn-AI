@@ -74,15 +74,18 @@ main{
     display: flex;
     align-items: center;
     margin-bottom: -30px;
-    margin-top: -200px;
+    margin-top: -40px;
     height: 88vh;
 }
 
 #mainContainer{
     width: 33%;
     margin-left: 10%;
+    margin-top: 300px;
     flex: 1;
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 400px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -109,7 +112,7 @@ main{
     margin-left: 10px;
 }
 
-#globalButton{
+#downloadButton{
     margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -121,7 +124,25 @@ main{
     width: 225px;
 }
 
-#globalButton:hover{
+#downloadButton:hover{
+    transition: transform 0.3s;
+    background-color: #086c33ae;
+    cursor: pointer;
+}
+
+#generateButton{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #086c3356;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    width: 225px;
+}
+
+#generateButton:hover{
     transition: transform 0.3s;
     background-color: #086c33ae;
     cursor: pointer;
