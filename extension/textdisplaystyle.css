@@ -77,6 +77,20 @@ header {
     width: 100%;
     text-align: center;
 }
+#questionContainer {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    font-style: italic;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+}
 
 #footercontent {
     font-family: 'Courier New', Courier, monospace;
