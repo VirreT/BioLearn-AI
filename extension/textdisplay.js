@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const response = urlParams.get('response');
 
     const responseContainer = document.getElementById('responseContainer');
+    const questionContainer = document.getElementById('questionContainer'); 
 
     if (response) {
         const decodedResponse = decodeURIComponent(response);
@@ -17,9 +18,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         const firstPartText = document.createElement('p');
 
-        firstPartText.textContent = firstPart;
-
-        responseContainer.appendChild(firstPartText);
+        if (firstPart.startsWith('§')) { 
+            firstPartText.textContent = firstPart.substring(1); 
+            questionContainer.appendChild(firstPartText); 
+        } else {
+            firstPartText.textContent = firstPart;
+            responseContainer.appendChild(firstPartText);
+        }
 
         splitResponse.forEach((text) => {
             const li = document.createElement('li');
