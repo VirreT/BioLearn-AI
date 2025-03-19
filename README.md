@@ -1,6 +1,6 @@
 # How to use the Chatbot
 
-###if you want to run this server on your machine follow these steps.
+### if you want to run this server on your machine follow these steps.
 
 1. You need Node.js downloaded and set up
 
@@ -18,4 +18,4 @@
 
 8. Save and close the editor and rename the file as ```.env``` make sure it is in the same intialized folder as ```server.js```
 
-####Now you can run the server by typing ```node server.js``` in admin cmd in the same folder.
+#### Now you can run the server by typing ```node server.js``` in admin cmd in the same folder.
