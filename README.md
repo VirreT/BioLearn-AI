@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/VirreT/BioLearn-AI/blob/main/assets/icon-popup.png" alt="Logo" width="128" height="128"> BioLearn-AI
+  <img src="https://raw.githubusercontent.com/VirreT/BioLearn-AI/main/assets/icon-128-1.png" alt="BioLearn-AI logo" width="64" height="64"> BioLearn-AI
 </h1>
 
 Learn biology with AI-powered examples, an embeddable website, and a small server/extension toolkit. This repository contains the UI, server helpers, and a browser-extension-style interface to experiment with interactive learning tools.
