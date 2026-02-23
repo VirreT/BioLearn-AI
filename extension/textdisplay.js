@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const response = urlParams.get('response');
 
     const responseContainer = document.getElementById('responseContainer');
+    const questionContainer = document.getElementById('questionContainer'); 
 
     // Enforce output format: only allow <p>, <ul>, <ol>, <li>, <strong>, <em>
     // Wrap output between literal markers <!--BEGIN--> and <!--END-->

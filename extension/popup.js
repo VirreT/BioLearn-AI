@@ -37,12 +37,14 @@ document.getElementById("extractText").addEventListener("click", () => {
             },
             body: JSON.stringify({
                 model: 'gpt-4o-mini',
+                temperature: 0.02,
                 messages: [
                     {
                         role: 'system',
                         content: `You are an experienced biology teacher. Provide a concise HTML-formatted summary using only these tags: <p>, <ul>, <ol>, <li>, <strong>, <em>. Wrap the HTML output between the literal markers <!--BEGIN--> and <!--END-->. If you cannot produce HTML, output <!--BEGIN--><!--END-->.
 
                               INSTRUCTIONS:
+                              - Write a coherent summary with no bullet points.
                               - Extract ALL biologically relevant information from the provided article.
                               - Preserve accuracy and do NOT add information that is not present in the text.
                               - Organize the summary logically (definitions → processes → mechanisms → examples → significance).
