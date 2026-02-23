@@ -1,21 +1,62 @@
-# How to use the Chatbot
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/VirreT/BioLearn-AI/main/assets/icon-128-1.png" alt="BioLearn-AI logo" width="128" height="128"> BioLearn-AI
+</h1>
 
-### if you want to run this server on your machine follow these steps.
+Learn biology with AI-powered examples, an embeddable website, and a small server/extension toolkit. This repository contains the UI, server helpers, and a browser-extension-style interface to experiment with interactive learning tools.
 
-1. You need Node.js downloaded and set up
+---
 
-2. Make a folder and open it in a admin command prompt 
+## Features
 
-3. Type ```npm init -y```. This will intialize the folder and make it ready for Node.js
+- Clean, single-file website interface in `website/` for demos and interactive lessons.
+- Small Node.js helper server under `Server/MAIN/` for AI-backed responses.
+- A lightweight extension-like UI in `extension/` for quick popup interactions.
+- Assets and animations for a friendly learning experience.
 
-4. Type ```npm install express axios dotenv``` in admin command prompt inside the folder. This will install all the dependencies required and will get the code to run
+## Repository structure
 
-5. Move the ```server.js``` file into this folder
+- `assets/` — icons and images used across the project.
+- `extension/` — popup UI, extension stylesheet and scripts.
+- `Server/MAIN/` — Node.js server, `server.js` and `package.json` to run local API helpers.
+- `website/` — demo pages, front-end scripts and styles.
 
-6. Create a ```.txt``` file with notepad or text editor of choice
+## Quick start
 
-7. Type ```OPENAI_API_KEY="YOUR KEY HERE"``` in the ```.txt``` file
+Prerequisites:
 
-8. Save and close the editor and rename the file as ```.env``` make sure it is in the same intialized folder as ```server.js```
+- Node.js (v14+ recommended)
 
-#### Now you can run the server by typing ```node server.js``` in admin cmd in the same folder.
+### Run the simple helper server
+
+1. Open a terminal at `Server/MAIN/`.
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create a `.env` file in the same folder and add your API key (if required by your setup):
+
+```env
+OPENAI_API_KEY="YOUR_KEY_HERE"
+```
+
+4. Start the server:
+
+```bash
+node server.js
+```
+
+The server provides example endpoints used by the website and extension UI.
+
+### Open the demo website
+
+You can open `localhost:8080` directly in your browser for a lightweight demo, or serve it from a static host.
+
+### Try the extension UI
+
+The `extension/` folder contains a popup and supporting scripts — load it into a Chromium-based browser as an unpacked extension for quick testing.
+
+## License
+
+This project includes a `LICENSE` file in the repository root — please check it for license details.
