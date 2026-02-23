@@ -71,6 +71,7 @@ header {
     border-radius: 8px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     margin: 2rem auto;
+    margin-bottom: 20rem;
     font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.5;
@@ -78,22 +79,29 @@ header {
     text-align: center;
 }
 
-#footercontent {
+footer{
     font-family: 'Courier New', Courier, monospace;
     background-color: #1c2129;
     color: white;
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 1rem 0;
-    display: flex;
+    margin-bottom:0;
+    padding: 0;
+    display: block;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
+    height: 100px;
 }
 
-footer #copyright {
-    margin: 0 auto; 
+#footercontent{
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
