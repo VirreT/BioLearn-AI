@@ -35,7 +35,7 @@ Prerequisites:
 npm install
 ```
 
-3. Create a `.env` file in the same folder and add your API key (if required by your setup):
+3. Create a `.env` file in the same folder and add your API key:
 
 ```env
 OPENAI_API_KEY="YOUR_KEY_HERE"
